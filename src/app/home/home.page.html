@@ -1,0 +1,30 @@
+<ion-content>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment [scrollable]="true" value="heart">
+      <ion-segment-button routerLink="/experiencia-laboral">
+        <ion-icon name="document-text-outline"></ion-icon>
+        <ion-label>Experiencia Laboral</ion-label>
+      </ion-segment-button>
+      <ion-segment-button routerLink="/certificaciones">
+        <ion-icon name="star"></ion-icon>
+        <ion-label>Certificaciones</ion-label>
+      </ion-segment-button>
+      <ion-segment-button routerLink="/mis-datos">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Mis Datos</ion-label>
+      </ion-segment-button>
+      <ion-segment-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+

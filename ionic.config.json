@@ -1,0 +1,7 @@
+{
+  "name": "AppQrasistencia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

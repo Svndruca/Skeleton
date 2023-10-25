@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title slot="start">
+      <ion-icon name="home" (click)="navigateToHome()"></ion-icon>
+    </ion-title>
+    <ion-title #titulo class="ion-text-center" style="font-size: 30px;">Bienvenido {{usuario}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div id="container">
+  
+<ion-list class="ion-margin-top">
+  <ion-item>
+    <ion-label style="font-size: 20px;" position="stacked">Nombre</ion-label>
+    <ion-input 
+      [(ngModel)]="nombre"
+      [clearInput]="true"
+      placeholder="Ingrese su nombre"
+      class="animate-input"
+    >
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label style="font-size: 20px;" position="stacked">Apellido</ion-label>
+    <ion-input
+      [(ngModel)]="apellido"
+      [clearInput]="true"
+      placeholder="Ingrese su apellido"
+      class="animate-input"
+    >
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label style="font-size: 20px;" position="stacked">Nivel de Educación</ion-label>
+    <ion-input
+      [(ngModel)]="nivelEducacion"
+      [clearInput]="true"
+      placeholder="Ingrese su nivel de educación"
+      class="animate-input"
+    >
+    </ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label style="font-size: 20px;" position="stacked">Fecha de Nacimiento</ion-label>
+    <ion-input
+      [(ngModel)]="fechaNacimiento"
+      [clearInput]="true"
+      placeholder="Seleccione su fecha de nacimiento"
+      type="date"
+      class="animate-input"
+    >
+    </ion-input>
+  </ion-item>
+  
+</ion-list>
+<ion-button expand="full" color="tertiary" (click)="limpiarCampos()">Limpiar</ion-button>
+<ion-button expand="full" color="tertiary" (click)="mostrarInfo()">Mostrar</ion-button>
+</div>
+</ion-content>

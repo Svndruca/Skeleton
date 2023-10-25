@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToHome()">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title slot="end">Certificaciones</ion-title>
+  </ion-toolbar>
+
+<ion-card>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="stacked">Nombre Certificado</ion-label>
+      <ion-input type="text" placeholder="Nombre del certificado"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Fecha de Obtención</ion-label>
+      <ion-input type="date"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>¿El certificado vence?</ion-label>
+      <ion-toggle (ionChange)="toggleCertificadoVence()"></ion-toggle>
+    </ion-item>
+
+    <ion-item *ngIf="certificadoVence">
+      <ion-label position="stacked">Fecha de Vencimiento</ion-label>
+      <ion-input type="date"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!certificadoVence">
+      <ion-label>No vence</ion-label>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+</ion-header>
+
+
+
+
